@@ -1,0 +1,18 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f3f6fb; color: #222; }
+header { background: #1f3a5f; color: #fff; padding: 16px 24px; }
+main { max-width: 1100px; margin: auto; padding: 16px; }
+.stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.card { flex: 1; min-width: 160px; background: #fff; padding: 14px; border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,.1); display: flex; justify-content: space-between; }
+.panel { background: #fff; margin-top: 16px; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+form, .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; flex: 1; min-width: 140px; }
+button { padding: 8px 14px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+button.danger { background: #dc2626; }
+button.green { background: #16a34a; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+th, td { padding: 8px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+th { background: #eaf0fa; }
+.overdue { color: #dc2626; font-weight: bold; }
+@media (max-width: 700px) { table { display: block; overflow-x: auto; } }

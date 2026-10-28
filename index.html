@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Library Management Interface</h1></header>
+  <main>
+    <section class="stats">
+      <div class="card">Total Titles <b id="statTitles">0</b></div>
+      <div class="card">Available Copies <b id="statAvail">0</b></div>
+      <div class="card">Issued Copies <b id="statIssued">0</b></div>
+    </section>
+
+    <section class="panel">
+      <h2>Add / Edit Book</h2>
+      <form id="bookForm">
+        <input type="hidden" id="bookId">
+        <input id="title" placeholder="Title" required>
+        <input id="author" placeholder="Author" required>
+        <input id="isbn" placeholder="ISBN" required>
+        <input id="category" placeholder="Category" required>
+        <input id="quantity" type="number" min="1" placeholder="Quantity" required>
+        <button type="submit">Save Book</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Book Catalogue</h2>
+      <div class="filters">
+        <input id="search" placeholder="Search by title, author or ISBN">
+        <select id="filterCategory"><option value="">All Categories</option></select>
+        <select id="filterAvail">
+          <option value="">All</option>
+          <option value="available">Available</option>
+          <option value="unavailable">Not Available</option>
+        </select>
+      </div>
+      <table>
+        <thead><tr><th>Title</th><th>Author</th><th>ISBN</th><th>Category</th><th>Total</th><th>Available</th><th>Issued</th><th>Actions</th></tr></thead>
+        <tbody id="bookList"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Issued Books</h2>
+      <table>
+        <thead><tr><th>Book</th><th>Borrower</th><th>Issue Date</th><th>Due Date</th><th>Action</th></tr></thead>
+        <tbody id="issueList"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
